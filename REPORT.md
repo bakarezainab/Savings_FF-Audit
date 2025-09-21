@@ -128,7 +128,7 @@ Users must approve first; otherwise, deposit reverts.
 
 **Impact:** UX issue, but can also lead to failed deposits with misleading error.
 
-**PoC:** test_DepositWithoutApprovalShouldRevert.
+**PoC:** `test_DepositWithoutApprovalShouldRevert`
 
 **Mitigation:** Add explicit require for allowance:
 ```solidity
@@ -183,7 +183,7 @@ can overflow before division.
 
 **Impact:** Low financial fairness issue
 
-**PoC:** test_DivisionTruncation
+**PoC:** `test_DivisionTruncation`
 
 **Mitigation:** Consider scaling reward rates to minimize truncation
 
