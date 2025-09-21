@@ -220,7 +220,8 @@ contract SavingsTest is Test {
 //     vm.stopPrank();
 
 //     // warp past min lock period so reward applies
-//     vm.warp(block.timestamp + savings.MIN_LOCK_PERIOD() + 1);
+//     uint256 minPeriod = savings.MIN_LOCK_PERIOD();
+//     vm.warp(block.timestamp + minPeriod + 1);
 
 //     // trim contract balance to only the deposit so bug shows clearly
 //     uint256 savingsBal = token.balanceOf(address(savings));
@@ -325,14 +326,11 @@ function testFixed_RewardCalculationWouldMatch() public {
     token.approve(address(savings), 100 ether);
     savings.deposit(100 ether);
     vm.stopPrank();
-
     // Warp past lock
     vm.warp(block.timestamp + savings.MIN_LOCK_PERIOD() + 1);
-
     // First withdrawal succeeds
     vm.startPrank(user);
     savings.withdraw(0);
-
     // Second withdrawal should revert because withdrawn already true
     vm.expectRevert(); // but currently panics
     savings.withdraw(0);
