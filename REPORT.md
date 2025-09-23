@@ -186,20 +186,6 @@ No function to add funds to an existing deposit.
 **Impact:** UX limitation, but not a vulnerability
 ---
 
-## Recommended Fix Summary
-
-- Fix reward calculation parameter order.  
-- Add `withdrawn` flag checks.  
-- Implement **checks-effects-interactions** or `nonReentrant` protection.  
-- Restrict or remove `emergencyWithdraw`.  
-- Fix event parameter ordering.  
-- Add zero address checks for token.  
-- Improve reward formula to avoid truncation.  
-- Explicitly check allowance before `transferFrom`.  
-- Consider allowing top-ups to existing deposits for better UX.  
-
----
-
 ## Conclusion
 
 The `TimeLockSavings` contract contains **critical vulnerabilities** including:  
