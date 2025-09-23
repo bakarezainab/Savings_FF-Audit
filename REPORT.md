@@ -14,11 +14,11 @@ The contract contains 5 CRITICAL vulnerabilities, 4 HIGH severity issues, and se
 |----|-----------|-------|
 | 1  | Critical  | Reward calculation parameter mixup |
 | 2  | Critical  | Reentrancy risk in `withdraw` |
-| 3  | Critical  | Emergency withdraw allows owner to steal all funds |
+| 3  | High  | Emergency withdraw allows owner to steal all funds |
 | 4  | High      | No `withdrawn` flag check → double withdrawals |
 | 5  | High      | `transferFrom` requires prior approval (deposit fails silently) |
-| 6  | Medium    | Incorrect event emission parameter order |
-| 7  | Medium    | Early withdraw event logs wrong values |
+| 6  | Low    | Incorrect event emission parameter order |
+| 7  | Low    | Early withdraw event logs wrong values |
 | 8  | Medium    | Arithmetic overflow in reward calculation |
 | 9  | Low       | Division truncation leads to zero reward for small deposits |
 | 10 | Low       | Missing zero address checks |
