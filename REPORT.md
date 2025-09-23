@@ -5,7 +5,7 @@
 This audit examines the TimeLockSavings smart contract, a time-locked savings protocol that allows users to deposit ERC20 tokens and earn rewards based on lock duration. The contract includes features for early withdrawal penalties, bonus rewards for extended locking, and administrative functions.
 
 ## Executive Summary
-The contract contains 5 CRITICAL vulnerabilities, 4 HIGH severity issues, and several MEDIUM/LOW severity problems. The most critical issues include reentrancy vulnerabilities that could lead to fund theft, parameter swapping bugs that cause incorrect reward calculations, and emergency functions that allow owner rug pulls.
+The contract contains 1 CRITICAL vulnerabilities, 3 HIGH severity issues, and several MEDIUM/LOW severity problems. The most critical issues include reentrancy vulnerabilities that could lead to fund theft, parameter swapping bugs that cause incorrect reward calculations, and emergency functions that allow owner rug pulls.
 
 
 ## Summary of Findings
