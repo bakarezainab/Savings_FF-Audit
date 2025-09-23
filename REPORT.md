@@ -13,7 +13,7 @@ The contract contains 5 CRITICAL vulnerabilities, 4 HIGH severity issues, and se
 | ID | Severity  | Title |
 |----|-----------|-------|
 | 1  | Critical  | Reward calculation parameter mixup |
-| 2  | Critical  | Reentrancy risk in `withdraw` |
+| 2  | Low  | Reentrancy risk in `withdraw` |
 | 3  | High  | Emergency withdraw allows owner to steal all funds |
 | 4  | High      | No `withdrawn` flag check → double withdrawals |
 | 5  | High      | `transferFrom` requires prior approval (deposit fails silently) |
